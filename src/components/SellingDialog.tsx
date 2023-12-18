@@ -5,10 +5,14 @@ import InputMask from "react-input-mask";
 export function SellingDialog() {
   return (
     <Dialog.Root>
-      <Dialog.Trigger>Cadastrar novo Pedido</Dialog.Trigger>
+      <Dialog.Trigger className="mx-4  my-6">
+        <button className="bg-blue-600 text-slate-50 font-semibold px-4 py-2 rounded border border-transparent transition-all duration-200 ease-in-out hover:bg-slate-100 hover:text-blue-500 hover:border-blue-500 focus:bg-slate-100 focus:text-blue-500 focus:border-blue-500">
+          Cadastrar novo pedido
+        </button>
+      </Dialog.Trigger>
       <Dialog.Overlay className="bg-black bg-opacity-25 fixed inset-0" />
       <Dialog.Content className="absolute inset-6">
-        <Dialog.Title className="bg-blue-800 px-4  py-4 rounded-t text-2xl font-semibold text-slate-100 ">
+        <Dialog.Title className="bg-blue-800 px-4 py-4 rounded-t text-2xl font-semibold text-slate-100 ">
           Cadastro Pedido
         </Dialog.Title>
         <Form.Root className="px-4 py-8 pb-24  bg-slate-100 rounded-b">
