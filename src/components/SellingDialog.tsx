@@ -31,11 +31,17 @@ export function SellingDialog() {
             </Form.Field>
             <Form.Field name="clifor" className="flex">
               <div className="flex flex-col ">
-                <div className="w-24 flex justify-between items-baseline">
-                  <Form.Label>Clifor</Form.Label>
+                <div className="w-32 flex justify-between items-baseline">
+                  <Form.Label>Clifor*</Form.Label>
+                  <Form.Message
+                    className="text-red-400 text-sm pointer-events-none select-none"
+                    match="valueMissing"
+                  >
+                    obrigatório
+                  </Form.Message>
                 </div>
                 <Form.Control asChild>
-                  <input type="text" className="w-24 px-2" />
+                  <input type="text" className="w-32 px-2" required />
                 </Form.Control>
               </div>
             </Form.Field>
@@ -69,7 +75,59 @@ export function SellingDialog() {
               </div>
             </Form.Field>
           </fieldset>
-          <fieldset></fieldset>
+          <fieldset className="flex gap-6">
+            <Form.Field name="cond" className="flex">
+              <div className="flex flex-col ">
+                <div className="w-80 flex justify-between items-baseline">
+                  <Form.Label>Cond. Pagamento*</Form.Label>
+                  <Form.Message
+                    className="text-red-400 text-sm pointer-events-none select-none"
+                    match="valueMissing"
+                  >
+                    Insira um valor
+                  </Form.Message>
+                </div>
+                <Form.Control asChild>
+                  <input type="text" className="w-full px-2" required />
+                </Form.Control>
+              </div>
+            </Form.Field>
+            <Form.Field name="forma" className="flex">
+              <div className="flex flex-col ">
+                <div className="w-32 flex justify-between items-baseline">
+                  <Form.Label>Forma*</Form.Label>
+                  <Form.Message
+                    className="text-red-400 text-sm pointer-events-none select-none"
+                    match="valueMissing"
+                  >
+                    obrigatório
+                  </Form.Message>
+                </div>
+                <Form.Control asChild>
+                  <input type="text" className="w-32 px-2" required />
+                </Form.Control>
+              </div>
+            </Form.Field>
+            <Form.Field name="forma" className="flex">
+              <div className="flex flex-col ">
+                <div className="w-32 flex justify-between items-baseline">
+                  <Form.Label>Moeda*</Form.Label>
+                  <Form.Message
+                    className="text-red-400 text-sm pointer-events-none select-none"
+                    match="valueMissing"
+                  >
+                    obrigatório
+                  </Form.Message>
+                </div>
+                <div className="flex gap-2">
+                  <Form.Control asChild>
+                    <input type="text" className="w-32 px-2" required />
+                  </Form.Control>
+                  <p>R$</p>
+                </div>
+              </div>
+            </Form.Field>
+          </fieldset>
           <Form.Submit asChild>
             <button>Confirm</button>
           </Form.Submit>
