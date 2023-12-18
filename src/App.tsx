@@ -7,7 +7,9 @@ export default function App() {
       <main className="relative">
         <Tabs.Root defaultValue="pedido">
           <Tabs.List>
-            <Tabs.Trigger value="item">Item</Tabs.Trigger>
+            <Tabs.Trigger className="data-[state=active]:outline" value="item">
+              Item
+            </Tabs.Trigger>
             <Tabs.Trigger value="pedido">Pedido</Tabs.Trigger>
           </Tabs.List>
           <Tabs.Content value="pedido">
